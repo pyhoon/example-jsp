@@ -16,17 +16,17 @@
 <title>Issue Tracking Application</title>
 
 <link rel="stylesheet" href="/jspexample/static/css/bootstrap.min.css" />
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
-	<div style="width: 500px; margin-left: 50px; margin-top: 20px;">
 
-		<div class="col-md-12 col-sm-6 col-xs-12">
+	<div style="margin-left: 50px; margin-top: 20px" class="col-md-6 col-sm-6 col-xs-12">
 
 			<div class="panel panel-default">
 
 				<div class="panel-heading clearfix">
 					<i class="icon-calendar"></i>
-					<h3 class="panel-title">Add New Issue</h3>
+					<span class="panel-title">Add New Issue</span>
 				</div>
 
 				<div class="panel-body">
@@ -72,7 +72,7 @@
 						<div class="form-group">
 							<label class="col-md-3"></label>
 							<div class="col-md-9">
-								<input type="submit" value="Submit" />
+								<input type="submit" value="Submit" class="btn btn-primary" />
 							</div>
 						</div>
 					</form>
@@ -81,7 +81,6 @@
 			</div>
 
 		</div>
-	</div>
 
 	<%
 		List< Issue > issueList = DbOperations.getTheInstance().getAllIssues();	
@@ -94,18 +93,18 @@
 		pageContext.setAttribute("issueColors", issueColors );
 	%>
 
-	<div style="width: 800px; margin-left: 50px; margin-top: 30px;">
+	<div >
 
 		<%
 			if ( issueList.size() > 0 ) {
 		%>
 
-		<div class="col-md-11">
+		<div style="margin-left: 50px" class="col-md-11">
 			<div class="panel panel-default">
 
 				<div class="panel-heading">
 					<i class="icon-calendar"></i>
-					<h3 class="panel-title">Issue List</h3>
+					<span class="panel-title">Issue List</span>
 				</div>
 				<div class="panel-body">
 					<table class="table table-hover col-md-11">
@@ -144,18 +143,18 @@
 		<%
 			}
 		%>
-	</div>	
-	
-	<div>
-		<jsp:useBean id="companyBean" class="com.javacodegeeks.examples.jspexample.db.entity.Company" />
-		
-		<jsp:setProperty property="name" name="companyBean" value="A"/>
-		<jsp:setProperty property="establishYear" name="companyBean" value="1998"/>
-		
-		<b><jsp:getProperty property="name" name="companyBean"/></b> company since 
-		<b><jsp:getProperty property="establishYear" name="companyBean"/></b>
 	</div>
-
+	
+	<div style="margin-left: 50px" class="col-md-12 col-sm-6">
+			<jsp:useBean id="companyBean" class="com.javacodegeeks.examples.jspexample.db.entity.Company" />
+			
+			<jsp:setProperty property="name" name="companyBean" value="JSP"/>
+			<jsp:setProperty property="establishYear" name="companyBean" value="2019"/>
+			
+			Learning <b><jsp:getProperty property="name" name="companyBean"/></b> since 
+			<b><jsp:getProperty property="establishYear" name="companyBean"/></b>
+	</div>
+	
 	<script type="text/javascript"
 		src="/jspexample/static/js/jquery-1.11.3.min.js" />	
 	<script type="text/javascript"
