@@ -1,4 +1,4 @@
-# jspexample
+# example-jsp
 Learning JSP from https://examples.javacodegeeks.com/enterprise-java/jsp/jsp-tutorial-beginners/
 
 **Preview**
