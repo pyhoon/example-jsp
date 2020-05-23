@@ -156,7 +156,7 @@
 	</div>
 	
 	<script type="text/javascript"
-		src="/jspexample/static/js/jquery-1.11.3.min.js" />	
+		src="/jspexample/static/js/jquery-3.5.0.min.js" />	
 	<script type="text/javascript"
 		src="/jspexample/static/js/bootstrap.min.js" />	
 			
